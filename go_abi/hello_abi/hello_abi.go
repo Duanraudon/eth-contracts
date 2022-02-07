@@ -27,7 +27,7 @@ var (
 )
 
 // HelloPolyABI is the input ABI used to generate the binding from.
-const HelloPolyABI = "[{\"constant\":false,\"inputs\":[{\"name\":\"_toChainId\",\"type\":\"uint64\"},{\"name\":\"_targetProxyHash\",\"type\":\"bytes\"}],\"name\":\"bindProxyHash\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"hearSomeThing\",\"outputs\":[{\"name\":\"\",\"type\":\"bytes\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"uint64\"}],\"name\":\"proxyHashMap\",\"outputs\":[{\"name\":\"\",\"type\":\"bytes\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_managerProxyContract\",\"type\":\"address\"}],\"name\":\"setManagerProxy\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"managerProxyContract\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_toChainId\",\"type\":\"uint64\"},{\"name\":\"functionName\",\"type\":\"string\"},{\"name\":\"_somethingWoW\",\"type\":\"string\"}],\"name\":\"say\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_somethingWoW\",\"type\":\"bytes\"},{\"name\":\"_fromContractAddr\",\"type\":\"bytes\"},{\"name\":\"_toChainId\",\"type\":\"uint64\"}],\"name\":\"hear\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"manager\",\"type\":\"address\"}],\"name\":\"SetManagerProxyEvent\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"toChainId\",\"type\":\"uint64\"},{\"indexed\":false,\"name\":\"targetProxyHash\",\"type\":\"bytes\"}],\"name\":\"BindProxyEvent\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"toChainId\",\"type\":\"uint64\"},{\"indexed\":false,\"name\":\"toContractAddress\",\"type\":\"bytes\"},{\"indexed\":false,\"name\":\"somethingWoW\",\"type\":\"bytes\"}],\"name\":\"Say\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"somethingWoW\",\"type\":\"bytes\"},{\"indexed\":false,\"name\":\"fromContractAddr\",\"type\":\"bytes\"}],\"name\":\"Hear\",\"type\":\"event\"}]"
+const HelloPolyABI = "[{\"constant\":false,\"inputs\":[{\"name\":\"_toChainId\",\"type\":\"uint64\"},{\"name\":\"_targetProxyHash\",\"type\":\"bytes\"}],\"name\":\"bindProxyHash\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"hearSomeThing\",\"outputs\":[{\"name\":\"\",\"type\":\"bytes\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"uint64\"}],\"name\":\"proxyHashMap\",\"outputs\":[{\"name\":\"\",\"type\":\"bytes\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_managerProxyContract\",\"type\":\"address\"}],\"name\":\"setManagerProxy\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"managerProxyContract\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_toChainId\",\"type\":\"uint64\"},{\"name\":\"_functionName\",\"type\":\"string\"},{\"name\":\"_somethingWoW\",\"type\":\"string\"}],\"name\":\"say\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_somethingWoW\",\"type\":\"bytes\"},{\"name\":\"_fromContractAddr\",\"type\":\"bytes\"},{\"name\":\"_toChainId\",\"type\":\"uint64\"}],\"name\":\"hear\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"manager\",\"type\":\"address\"}],\"name\":\"SetManagerProxyEvent\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"toChainId\",\"type\":\"uint64\"},{\"indexed\":false,\"name\":\"targetProxyHash\",\"type\":\"bytes\"}],\"name\":\"BindProxyEvent\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"toChainId\",\"type\":\"uint64\"},{\"indexed\":false,\"name\":\"toContractAddress\",\"type\":\"bytes\"},{\"indexed\":false,\"name\":\"somethingWoW\",\"type\":\"bytes\"}],\"name\":\"Say\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"somethingWoW\",\"type\":\"bytes\"},{\"indexed\":false,\"name\":\"fromContractAddr\",\"type\":\"bytes\"}],\"name\":\"Hear\",\"type\":\"event\"}]"
 
 // HelloPolyFuncSigs maps the 4-byte function signature to its string representation.
 var HelloPolyFuncSigs = map[string]string{
@@ -41,7 +41,7 @@ var HelloPolyFuncSigs = map[string]string{
 }
 
 // HelloPolyBin is the compiled bytecode used for deploying new contracts.
-var HelloPolyBin = "0x608060405234801561001057600080fd5b50610c1d806100206000396000f3006080604052600436106100695763ffffffff60e060020a600035041663379b98f6811461006e578063952ccdc4146100ea5780639e5767aa14610174578063af9980f014610196578063d798f881146101b9578063eb95c85f146101ea578063f42e8ff014610290575b600080fd5b34801561007a57600080fd5b5060408051602060046024803582810135601f81018590048502860185019096528585526100d695833567ffffffffffffffff169536956044949193909101919081908401838280828437509497506103339650505050505050565b604080519115158252519081900360200190f35b3480156100f657600080fd5b506100ff61041b565b6040805160208082528351818301528351919283929083019185019080838360005b83811015610139578181015183820152602001610121565b50505050905090810190601f1680156101665780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34801561018057600080fd5b506100ff67ffffffffffffffff600435166104a6565b3480156101a257600080fd5b506101b7600160a060020a036004351661050d565b005b3480156101c557600080fd5b506101ce610574565b60408051600160a060020a039092168252519081900360200190f35b3480156101f657600080fd5b5060408051602060046024803582810135601f81018590048502860185019096528585526100d695833567ffffffffffffffff1695369560449491939091019190819084018382808284375050604080516020601f89358b018035918201839004830284018301909452808352979a9998810197919650918201945092508291508401838280828437509497506105839650505050505050565b34801561029c57600080fd5b506040805160206004803580820135601f81018490048402850184019095528484526100d694369492936024939284019190819084018382808284375050604080516020601f89358b018035918201839004830284018301909452808352979a9998810197919650918201945092508291508401838280828437509497505050923567ffffffffffffffff169350610a3592505050565b67ffffffffffffffff821660009081526001602090815260408220835161035c92850190610b56565b507fdacd7d303272a3b58aec6620d6d1fb588f4996a5b46858ed437f1c34348f2d0f8383604051808367ffffffffffffffff1667ffffffffffffffff16815260200180602001828103825283818151815260200191508051906020019080838360005b838110156103d75781810151838201526020016103bf565b50505050905090810190601f1680156104045780820380516001836020036101000a031916815260200191505b50935050505060405180910390a150600192915050565b6002805460408051602060018416156101000260001901909316849004601f8101849004840282018401909252818152929183018282801561049e5780601f106104735761010080835404028352916020019161049e565b820191906000526020600020905b81548152906001019060200180831161048157829003601f168201915b505050505081565b60016020818152600092835260409283902080548451600294821615610100026000190190911693909304601f810183900483028401830190945283835291929083018282801561049e5780601f106104735761010080835404028352916020019161049e565b6000805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a03838116919091179182905560408051929091168252517f43b1a8ec337adb61e8311ed025d99c80db65c02fe5c5027c1b6a93b40970cec4916020908290030190a150565b600054600160a060020a031681565b60008060008060606000809054906101000a9004600160a060020a0316935083600160a060020a03166387939a7f6040518163ffffffff1660e060020a028152600401602060405180830381600087803b1580156105e057600080fd5b505af11580156105f4573d6000803e3d6000fd5b505050506040513d602081101561060a57600080fd5b505167ffffffffffffffff891660009081526001602081815260409283902080548451600294821615610100026000190190911693909304601f8101839004830284018301909452838352939650869550909291908301828280156106b05780601f10610685576101008083540402835291602001916106b0565b820191906000526020600020905b81548152906001019060200180831161069357829003601f168201915b5050505050905081600160a060020a031663bd5cf62589838a8a6040518563ffffffff1660e060020a028152600401808567ffffffffffffffff1667ffffffffffffffff168152602001806020018060200180602001848103845287818151815260200191508051906020019080838360005b8381101561073b578181015183820152602001610723565b50505050905090810190601f1680156107685780820380516001836020036101000a031916815260200191505b50848103835286518152865160209182019188019080838360005b8381101561079b578181015183820152602001610783565b50505050905090810190601f1680156107c85780820380516001836020036101000a031916815260200191505b50848103825285518152855160209182019187019080838360005b838110156107fb5781810151838201526020016107e3565b50505050905090810190601f1680156108285780820380516001836020036101000a031916815260200191505b50975050505050505050602060405180830381600087803b15801561084c57600080fd5b505af1158015610860573d6000803e3d6000fd5b505050506040513d602081101561087657600080fd5b5051151561090b57604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152602f60248201527f45746843726f7373436861696e4d616e616765722063726f7373436861696e2060448201527f6578656375746564206572726f72210000000000000000000000000000000000606482015290519081900360840190fd5b7f6d79831d873f007520be5fc48cecfe5ecb3fbc99963f511184d52f0f9e8654af888288604051808467ffffffffffffffff1667ffffffffffffffff1681526020018060200180602001838103835285818151815260200191508051906020019080838360005b8381101561098a578181015183820152602001610972565b50505050905090810190601f1680156109b75780820380516001836020036101000a031916815260200191505b50838103825284518152845160209182019186019080838360005b838110156109ea5781810151838201526020016109d2565b50505050905090810190601f168015610a175780820380516001836020036101000a031916815260200191505b509550505050505060405180910390a1506001979650505050505050565b8251600090610a4b906002906020870190610b56565b507fde3dff0487572889d19ed051ddecb40eff7add6d5c728a1290a3803b2f3e465c8484604051808060200180602001838103835285818151815260200191508051906020019080838360005b83811015610ab0578181015183820152602001610a98565b50505050905090810190601f168015610add5780820380516001836020036101000a031916815260200191505b50838103825284518152845160209182019186019080838360005b83811015610b10578181015183820152602001610af8565b50505050905090810190601f168015610b3d5780820380516001836020036101000a031916815260200191505b5094505050505060405180910390a15060019392505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f10610b9757805160ff1916838001178555610bc4565b82800160010185558215610bc4579182015b82811115610bc4578251825591602001919060010190610ba9565b50610bd0929150610bd4565b5090565b610bee91905b80821115610bd05760008155600101610bda565b905600a165627a7a723058203f980f3831ff8982f6770d30b6839185bdfaa64bf17bd407213c483f691112c30029"
+var HelloPolyBin = "0x608060405234801561001057600080fd5b50610c1d806100206000396000f3006080604052600436106100695763ffffffff60e060020a600035041663379b98f6811461006e578063952ccdc4146100ea5780639e5767aa14610174578063af9980f014610196578063d798f881146101b9578063eb95c85f146101ea578063f42e8ff014610290575b600080fd5b34801561007a57600080fd5b5060408051602060046024803582810135601f81018590048502860185019096528585526100d695833567ffffffffffffffff169536956044949193909101919081908401838280828437509497506103339650505050505050565b604080519115158252519081900360200190f35b3480156100f657600080fd5b506100ff61041b565b6040805160208082528351818301528351919283929083019185019080838360005b83811015610139578181015183820152602001610121565b50505050905090810190601f1680156101665780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34801561018057600080fd5b506100ff67ffffffffffffffff600435166104a6565b3480156101a257600080fd5b506101b7600160a060020a036004351661050d565b005b3480156101c557600080fd5b506101ce610574565b60408051600160a060020a039092168252519081900360200190f35b3480156101f657600080fd5b5060408051602060046024803582810135601f81018590048502860185019096528585526100d695833567ffffffffffffffff1695369560449491939091019190819084018382808284375050604080516020601f89358b018035918201839004830284018301909452808352979a9998810197919650918201945092508291508401838280828437509497506105839650505050505050565b34801561029c57600080fd5b506040805160206004803580820135601f81018490048402850184019095528484526100d694369492936024939284019190819084018382808284375050604080516020601f89358b018035918201839004830284018301909452808352979a9998810197919650918201945092508291508401838280828437509497505050923567ffffffffffffffff169350610a3592505050565b67ffffffffffffffff821660009081526001602090815260408220835161035c92850190610b56565b507fdacd7d303272a3b58aec6620d6d1fb588f4996a5b46858ed437f1c34348f2d0f8383604051808367ffffffffffffffff1667ffffffffffffffff16815260200180602001828103825283818151815260200191508051906020019080838360005b838110156103d75781810151838201526020016103bf565b50505050905090810190601f1680156104045780820380516001836020036101000a031916815260200191505b50935050505060405180910390a150600192915050565b6002805460408051602060018416156101000260001901909316849004601f8101849004840282018401909252818152929183018282801561049e5780601f106104735761010080835404028352916020019161049e565b820191906000526020600020905b81548152906001019060200180831161048157829003601f168201915b505050505081565b60016020818152600092835260409283902080548451600294821615610100026000190190911693909304601f810183900483028401830190945283835291929083018282801561049e5780601f106104735761010080835404028352916020019161049e565b6000805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a03838116919091179182905560408051929091168252517f43b1a8ec337adb61e8311ed025d99c80db65c02fe5c5027c1b6a93b40970cec4916020908290030190a150565b600054600160a060020a031681565b60008060008060606000809054906101000a9004600160a060020a0316935083600160a060020a03166387939a7f6040518163ffffffff1660e060020a028152600401602060405180830381600087803b1580156105e057600080fd5b505af11580156105f4573d6000803e3d6000fd5b505050506040513d602081101561060a57600080fd5b505167ffffffffffffffff891660009081526001602081815260409283902080548451600294821615610100026000190190911693909304601f8101839004830284018301909452838352939650869550909291908301828280156106b05780601f10610685576101008083540402835291602001916106b0565b820191906000526020600020905b81548152906001019060200180831161069357829003601f168201915b5050505050905081600160a060020a031663bd5cf62589838a8a6040518563ffffffff1660e060020a028152600401808567ffffffffffffffff1667ffffffffffffffff168152602001806020018060200180602001848103845287818151815260200191508051906020019080838360005b8381101561073b578181015183820152602001610723565b50505050905090810190601f1680156107685780820380516001836020036101000a031916815260200191505b50848103835286518152865160209182019188019080838360005b8381101561079b578181015183820152602001610783565b50505050905090810190601f1680156107c85780820380516001836020036101000a031916815260200191505b50848103825285518152855160209182019187019080838360005b838110156107fb5781810151838201526020016107e3565b50505050905090810190601f1680156108285780820380516001836020036101000a031916815260200191505b50975050505050505050602060405180830381600087803b15801561084c57600080fd5b505af1158015610860573d6000803e3d6000fd5b505050506040513d602081101561087657600080fd5b5051151561090b57604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152602f60248201527f45746843726f7373436861696e4d616e616765722063726f7373436861696e2060448201527f6578656375746564206572726f72210000000000000000000000000000000000606482015290519081900360840190fd5b7f6d79831d873f007520be5fc48cecfe5ecb3fbc99963f511184d52f0f9e8654af888288604051808467ffffffffffffffff1667ffffffffffffffff1681526020018060200180602001838103835285818151815260200191508051906020019080838360005b8381101561098a578181015183820152602001610972565b50505050905090810190601f1680156109b75780820380516001836020036101000a031916815260200191505b50838103825284518152845160209182019186019080838360005b838110156109ea5781810151838201526020016109d2565b50505050905090810190601f168015610a175780820380516001836020036101000a031916815260200191505b509550505050505060405180910390a1506001979650505050505050565b8251600090610a4b906002906020870190610b56565b507fde3dff0487572889d19ed051ddecb40eff7add6d5c728a1290a3803b2f3e465c8484604051808060200180602001838103835285818151815260200191508051906020019080838360005b83811015610ab0578181015183820152602001610a98565b50505050905090810190601f168015610add5780820380516001836020036101000a031916815260200191505b50838103825284518152845160209182019186019080838360005b83811015610b10578181015183820152602001610af8565b50505050905090810190601f168015610b3d5780820380516001836020036101000a031916815260200191505b5094505050505060405180910390a15060019392505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f10610b9757805160ff1916838001178555610bc4565b82800160010185558215610bc4579182015b82811115610bc4578251825591602001919060010190610ba9565b50610bd0929150610bd4565b5090565b610bee91905b80821115610bd05760008155600101610bda565b905600a165627a7a72305820dd74a710515588994df61dd12140f2e91e3a94231d52f4c08bced767aa17408f0029"
 
 // DeployHelloPoly deploys a new Ethereum contract, binding an instance of HelloPoly to it.
 func DeployHelloPoly(auth *bind.TransactOpts, backend bind.ContractBackend) (common.Address, *types.Transaction, *HelloPoly, error) {
@@ -165,7 +165,7 @@ func bindHelloPoly(address common.Address, caller bind.ContractCaller, transacto
 // sets the output to result. The result type might be a single field for simple
 // returns, a slice of interfaces for anonymous returns and a struct for named
 // returns.
-func (_HelloPoly *HelloPolyRaw) Call(opts *bind.CallOpts, result *[]interface{}, method string, params ...interface{}) error {
+func (_HelloPoly *HelloPolyRaw) Call(opts *bind.CallOpts, result interface{}, method string, params ...interface{}) error {
 	return _HelloPoly.Contract.HelloPolyCaller.contract.Call(opts, result, method, params...)
 }
 
@@ -184,7 +184,7 @@ func (_HelloPoly *HelloPolyRaw) Transact(opts *bind.TransactOpts, method string,
 // sets the output to result. The result type might be a single field for simple
 // returns, a slice of interfaces for anonymous returns and a struct for named
 // returns.
-func (_HelloPoly *HelloPolyCallerRaw) Call(opts *bind.CallOpts, result *[]interface{}, method string, params ...interface{}) error {
+func (_HelloPoly *HelloPolyCallerRaw) Call(opts *bind.CallOpts, result interface{}, method string, params ...interface{}) error {
 	return _HelloPoly.Contract.contract.Call(opts, result, method, params...)
 }
 
@@ -203,17 +203,12 @@ func (_HelloPoly *HelloPolyTransactorRaw) Transact(opts *bind.TransactOpts, meth
 //
 // Solidity: function hearSomeThing() view returns(bytes)
 func (_HelloPoly *HelloPolyCaller) HearSomeThing(opts *bind.CallOpts) ([]byte, error) {
-	var out []interface{}
-	err := _HelloPoly.contract.Call(opts, &out, "hearSomeThing")
-
-	if err != nil {
-		return *new([]byte), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new([]byte)).(*[]byte)
-
-	return out0, err
-
+	var (
+		ret0 = new([]byte)
+	)
+	out := ret0
+	err := _HelloPoly.contract.Call(opts, out, "hearSomeThing")
+	return *ret0, err
 }
 
 // HearSomeThing is a free data retrieval call binding the contract method 0x952ccdc4.
@@ -234,17 +229,12 @@ func (_HelloPoly *HelloPolyCallerSession) HearSomeThing() ([]byte, error) {
 //
 // Solidity: function managerProxyContract() view returns(address)
 func (_HelloPoly *HelloPolyCaller) ManagerProxyContract(opts *bind.CallOpts) (common.Address, error) {
-	var out []interface{}
-	err := _HelloPoly.contract.Call(opts, &out, "managerProxyContract")
-
-	if err != nil {
-		return *new(common.Address), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new(common.Address)).(*common.Address)
-
-	return out0, err
-
+	var (
+		ret0 = new(common.Address)
+	)
+	out := ret0
+	err := _HelloPoly.contract.Call(opts, out, "managerProxyContract")
+	return *ret0, err
 }
 
 // ManagerProxyContract is a free data retrieval call binding the contract method 0xd798f881.
@@ -265,17 +255,12 @@ func (_HelloPoly *HelloPolyCallerSession) ManagerProxyContract() (common.Address
 //
 // Solidity: function proxyHashMap(uint64 ) view returns(bytes)
 func (_HelloPoly *HelloPolyCaller) ProxyHashMap(opts *bind.CallOpts, arg0 uint64) ([]byte, error) {
-	var out []interface{}
-	err := _HelloPoly.contract.Call(opts, &out, "proxyHashMap", arg0)
-
-	if err != nil {
-		return *new([]byte), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new([]byte)).(*[]byte)
-
-	return out0, err
-
+	var (
+		ret0 = new([]byte)
+	)
+	out := ret0
+	err := _HelloPoly.contract.Call(opts, out, "proxyHashMap", arg0)
+	return *ret0, err
 }
 
 // ProxyHashMap is a free data retrieval call binding the contract method 0x9e5767aa.
@@ -336,23 +321,23 @@ func (_HelloPoly *HelloPolyTransactorSession) Hear(_somethingWoW []byte, _fromCo
 
 // Say is a paid mutator transaction binding the contract method 0xeb95c85f.
 //
-// Solidity: function say(uint64 _toChainId, string functionName, string _somethingWoW) returns(bool)
-func (_HelloPoly *HelloPolyTransactor) Say(opts *bind.TransactOpts, _toChainId uint64, functionName string, _somethingWoW string) (*types.Transaction, error) {
-	return _HelloPoly.contract.Transact(opts, "say", _toChainId, functionName, _somethingWoW)
+// Solidity: function say(uint64 _toChainId, string _functionName, string _somethingWoW) returns(bool)
+func (_HelloPoly *HelloPolyTransactor) Say(opts *bind.TransactOpts, _toChainId uint64, _functionName string, _somethingWoW string) (*types.Transaction, error) {
+	return _HelloPoly.contract.Transact(opts, "say", _toChainId, _functionName, _somethingWoW)
 }
 
 // Say is a paid mutator transaction binding the contract method 0xeb95c85f.
 //
-// Solidity: function say(uint64 _toChainId, string functionName, string _somethingWoW) returns(bool)
-func (_HelloPoly *HelloPolySession) Say(_toChainId uint64, functionName string, _somethingWoW string) (*types.Transaction, error) {
-	return _HelloPoly.Contract.Say(&_HelloPoly.TransactOpts, _toChainId, functionName, _somethingWoW)
+// Solidity: function say(uint64 _toChainId, string _functionName, string _somethingWoW) returns(bool)
+func (_HelloPoly *HelloPolySession) Say(_toChainId uint64, _functionName string, _somethingWoW string) (*types.Transaction, error) {
+	return _HelloPoly.Contract.Say(&_HelloPoly.TransactOpts, _toChainId, _functionName, _somethingWoW)
 }
 
 // Say is a paid mutator transaction binding the contract method 0xeb95c85f.
 //
-// Solidity: function say(uint64 _toChainId, string functionName, string _somethingWoW) returns(bool)
-func (_HelloPoly *HelloPolyTransactorSession) Say(_toChainId uint64, functionName string, _somethingWoW string) (*types.Transaction, error) {
-	return _HelloPoly.Contract.Say(&_HelloPoly.TransactOpts, _toChainId, functionName, _somethingWoW)
+// Solidity: function say(uint64 _toChainId, string _functionName, string _somethingWoW) returns(bool)
+func (_HelloPoly *HelloPolyTransactorSession) Say(_toChainId uint64, _functionName string, _somethingWoW string) (*types.Transaction, error) {
+	return _HelloPoly.Contract.Say(&_HelloPoly.TransactOpts, _toChainId, _functionName, _somethingWoW)
 }
 
 // SetManagerProxy is a paid mutator transaction binding the contract method 0xaf9980f0.
@@ -507,7 +492,6 @@ func (_HelloPoly *HelloPolyFilterer) ParseBindProxyEvent(log types.Log) (*HelloP
 	if err := _HelloPoly.contract.UnpackLog(event, "BindProxyEvent", log); err != nil {
 		return nil, err
 	}
-	event.Raw = log
 	return event, nil
 }
 
@@ -642,7 +626,6 @@ func (_HelloPoly *HelloPolyFilterer) ParseHear(log types.Log) (*HelloPolyHear, e
 	if err := _HelloPoly.contract.UnpackLog(event, "Hear", log); err != nil {
 		return nil, err
 	}
-	event.Raw = log
 	return event, nil
 }
 
@@ -778,7 +761,6 @@ func (_HelloPoly *HelloPolyFilterer) ParseSay(log types.Log) (*HelloPolySay, err
 	if err := _HelloPoly.contract.UnpackLog(event, "Say", log); err != nil {
 		return nil, err
 	}
-	event.Raw = log
 	return event, nil
 }
 
@@ -912,7 +894,6 @@ func (_HelloPoly *HelloPolyFilterer) ParseSetManagerProxyEvent(log types.Log) (*
 	if err := _HelloPoly.contract.UnpackLog(event, "SetManagerProxyEvent", log); err != nil {
 		return nil, err
 	}
-	event.Raw = log
 	return event, nil
 }
 
@@ -1032,7 +1013,7 @@ func bindIEthCrossChainManager(address common.Address, caller bind.ContractCalle
 // sets the output to result. The result type might be a single field for simple
 // returns, a slice of interfaces for anonymous returns and a struct for named
 // returns.
-func (_IEthCrossChainManager *IEthCrossChainManagerRaw) Call(opts *bind.CallOpts, result *[]interface{}, method string, params ...interface{}) error {
+func (_IEthCrossChainManager *IEthCrossChainManagerRaw) Call(opts *bind.CallOpts, result interface{}, method string, params ...interface{}) error {
 	return _IEthCrossChainManager.Contract.IEthCrossChainManagerCaller.contract.Call(opts, result, method, params...)
 }
 
@@ -1051,7 +1032,7 @@ func (_IEthCrossChainManager *IEthCrossChainManagerRaw) Transact(opts *bind.Tran
 // sets the output to result. The result type might be a single field for simple
 // returns, a slice of interfaces for anonymous returns and a struct for named
 // returns.
-func (_IEthCrossChainManager *IEthCrossChainManagerCallerRaw) Call(opts *bind.CallOpts, result *[]interface{}, method string, params ...interface{}) error {
+func (_IEthCrossChainManager *IEthCrossChainManagerCallerRaw) Call(opts *bind.CallOpts, result interface{}, method string, params ...interface{}) error {
 	return _IEthCrossChainManager.Contract.contract.Call(opts, result, method, params...)
 }
 
@@ -1203,7 +1184,7 @@ func bindIEthCrossChainManagerProxy(address common.Address, caller bind.Contract
 // sets the output to result. The result type might be a single field for simple
 // returns, a slice of interfaces for anonymous returns and a struct for named
 // returns.
-func (_IEthCrossChainManagerProxy *IEthCrossChainManagerProxyRaw) Call(opts *bind.CallOpts, result *[]interface{}, method string, params ...interface{}) error {
+func (_IEthCrossChainManagerProxy *IEthCrossChainManagerProxyRaw) Call(opts *bind.CallOpts, result interface{}, method string, params ...interface{}) error {
 	return _IEthCrossChainManagerProxy.Contract.IEthCrossChainManagerProxyCaller.contract.Call(opts, result, method, params...)
 }
 
@@ -1222,7 +1203,7 @@ func (_IEthCrossChainManagerProxy *IEthCrossChainManagerProxyRaw) Transact(opts 
 // sets the output to result. The result type might be a single field for simple
 // returns, a slice of interfaces for anonymous returns and a struct for named
 // returns.
-func (_IEthCrossChainManagerProxy *IEthCrossChainManagerProxyCallerRaw) Call(opts *bind.CallOpts, result *[]interface{}, method string, params ...interface{}) error {
+func (_IEthCrossChainManagerProxy *IEthCrossChainManagerProxyCallerRaw) Call(opts *bind.CallOpts, result interface{}, method string, params ...interface{}) error {
 	return _IEthCrossChainManagerProxy.Contract.contract.Call(opts, result, method, params...)
 }
 
@@ -1241,17 +1222,12 @@ func (_IEthCrossChainManagerProxy *IEthCrossChainManagerProxyTransactorRaw) Tran
 //
 // Solidity: function getEthCrossChainManager() view returns(address)
 func (_IEthCrossChainManagerProxy *IEthCrossChainManagerProxyCaller) GetEthCrossChainManager(opts *bind.CallOpts) (common.Address, error) {
-	var out []interface{}
-	err := _IEthCrossChainManagerProxy.contract.Call(opts, &out, "getEthCrossChainManager")
-
-	if err != nil {
-		return *new(common.Address), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new(common.Address)).(*common.Address)
-
-	return out0, err
-
+	var (
+		ret0 = new(common.Address)
+	)
+	out := ret0
+	err := _IEthCrossChainManagerProxy.contract.Call(opts, out, "getEthCrossChainManager")
+	return *ret0, err
 }
 
 // GetEthCrossChainManager is a free data retrieval call binding the contract method 0x87939a7f.
